@@ -20,6 +20,7 @@ public:
 	~BruteForce();
 
 	void BF_solve();
+    void BF_solve(int, int);
 	void route_print(int*);
 	int* get_route();
 	int* get_best_route();

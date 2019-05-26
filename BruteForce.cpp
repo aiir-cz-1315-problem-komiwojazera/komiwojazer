@@ -37,7 +37,20 @@ void BruteForce::BF_solve() {
 			route_copy();
 		}
 	} while (std::next_permutation(route + 1, route + dim)); // const position of city 1 
+}
 
+void BruteForce::BF_solve(int perm_start, int perm_end) {
+	for (int i = 0; i < perm_start; i++) { 
+        std::next_permutation(route + 1, route + dim);
+    }
+    do {
+		cost = calculate_cost();	// calculate cost for given permutation
+		if (cost < best_cost) {		// if better solution - it's new best cost and route
+			best_cost = cost;
+			route_copy();
+		}
+        perm_start++;
+	} while (std::next_permutation(route + 1, route + dim) && perm_start <= perm_end); // const position of city 1 
 }
 
 /* Calculate cost for given permutation */

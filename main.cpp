@@ -29,10 +29,24 @@ int main(int argc, char* argv[])
                 dim = data.get_dim();
 				BruteForce BF = BruteForce(&data);
 
-				BF.BF_solve();
-
+				BF.BF_solve(0, 30);
                 BF.route_print(BF.get_best_route());
+                std::cout << "cost " << BF.get_best_cost() << std::endl;
                 
+                BruteForce BF1 = BruteForce(&data);
+                BF1.BF_solve(31, 60);
+                BF1.route_print(BF1.get_best_route());
+                std::cout << "cost " << BF1.get_best_cost() << std::endl;
+                
+                BruteForce BF2 = BruteForce(&data);
+                BF2.BF_solve(61, 90);
+                BF2.route_print(BF2.get_best_route());
+                std::cout << "cost " << BF2.get_best_cost() << std::endl;
+    
+                BruteForce BF3 = BruteForce(&data);
+                BF3.BF_solve(91, 120);
+                BF3.route_print(BF3.get_best_route());
+                std::cout << "cost " << BF3.get_best_cost() << std::endl;
 		}
 		catch (const pea_zp1::zp1_err &err) {
 			std::cerr << "pea_zp1::zp1_err error: " << err << std::endl;
