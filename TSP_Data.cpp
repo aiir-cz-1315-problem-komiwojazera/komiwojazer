@@ -17,6 +17,7 @@ TSP_Data::TSP_Data(std::string filename) : dim(0), dist_data(nullptr) {
 }
 
 /* Generate random data */
+/*
 TSP_Data::TSP_Data(int num, float max) : dim(num), dist_data(nullptr) {
 	if (dim < 3) {
 		throw pea_zp1::ERR_DIM;
@@ -31,7 +32,7 @@ TSP_Data::TSP_Data(int num, float max) : dim(num), dist_data(nullptr) {
 		}
 	} 
 }
-
+*/
 TSP_Data::~TSP_Data() {
 	if (dim != 0) {
 		for (int i = 0; i < dim; i++) {

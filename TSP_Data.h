@@ -16,7 +16,7 @@ class TSP_Data
 
 public:
 	TSP_Data(std::string filename);
-	TSP_Data(int num, float max = 200.0f);
+//	TSP_Data(int num, float max = 200.0f);
 	~TSP_Data();
 	
 	void print();

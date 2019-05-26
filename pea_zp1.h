@@ -1,6 +1,7 @@
 #pragma once
-#include <windows.h>
-#include <random>
+//#include <windows.h>
+//#include <random>
+#define FLT_MAX     __FLT_MAX__
 
 namespace pea_zp1 {
 
@@ -13,7 +14,7 @@ namespace pea_zp1 {
 	};
 
 
-	int zp1_rand(int, int);
+//	int zp1_rand(int, int);
 
 	
 	
